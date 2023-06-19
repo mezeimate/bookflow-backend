@@ -6,17 +6,19 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
+import lombok.Data;
 
 import java.time.OffsetDateTime;
 
 @Entity
 @Table(name = "BOOK")
+@Data
 public class Book {
 
     @Id
     @NotNull
     @Size(max = 13)
-    private String ISBN;
+    private String isbn;
 
     @NotNull
     @Size(max = 255)
@@ -36,4 +38,5 @@ public class Book {
 
     @Column(name = "BORROWED_PIECE")
     private int borrowedPiece;
+
 }

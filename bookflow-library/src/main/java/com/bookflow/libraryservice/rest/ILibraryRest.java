@@ -12,6 +12,6 @@ import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 public interface ILibraryRest {
 
     @GET
-    @Produces({MediaType.APPLICATION_JSON})
+    @Produces({MediaType.TEXT_PLAIN})
     Book getByIsbn();
 }
