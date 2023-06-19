@@ -55,26 +55,28 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
+
         <dependency>
             <groupId>jakarta.persistence</groupId>
             <artifactId>jakarta.persistence-api</artifactId>
         </dependency>
+
         <dependency>
             <groupId>jakarta.validation</groupId>
             <artifactId>jakarta.validation-api</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>org.apache.deltaspike.modules</groupId>
-            <artifactId>deltaspike-data-module-api</artifactId>
-            <version>${deltaspike.version}</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.apache.deltaspike.modules</groupId>-->
+<!--            <artifactId>deltaspike-data-module-api</artifactId>-->
+<!--            <version>${deltaspike.version}</version>-->
+<!--        </dependency>-->
 
-        <dependency>
-            <groupId>org.apache.deltaspike.modules</groupId>
-            <artifactId>deltaspike-data-module-impl</artifactId>
-            <version>${deltaspike.version}</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.apache.deltaspike.modules</groupId>-->
+<!--            <artifactId>deltaspike-data-module-impl</artifactId>-->
+<!--            <version>${deltaspike.version}</version>-->
+<!--        </dependency>-->
 
     </dependencies>
 

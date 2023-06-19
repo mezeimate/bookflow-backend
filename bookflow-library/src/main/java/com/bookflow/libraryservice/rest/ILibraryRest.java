@@ -5,10 +5,8 @@ import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
-import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 
 @Path("/library")
-@Tag(name = "Library Rest VÉGPONTOK !!!!!!!!")
 public interface ILibraryRest {
 
     @GET
