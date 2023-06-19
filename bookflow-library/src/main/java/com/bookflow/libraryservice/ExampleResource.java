@@ -1,4 +1,4 @@
-package com.bookflow.examplerest;
+package com.bookflow.libraryservice;
 
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;

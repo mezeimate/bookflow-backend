@@ -2,7 +2,7 @@ quarkus:
   http:
     port: 8082
   datasource:
-    url: jdbc:mariadb://localhost:3306/db_name
+    url: jdbc:mariadb://localhost:3306
     driver: org.mariadb.jdbc.Driver
-    username: db_username
-    password: db_password
+    username: bookflow-admin
+    password: passwd
