@@ -13,6 +13,6 @@ public class LibraryRest implements ILibraryRest {
 
     @Override
     public Book getByIsbn() {
-        return libraryAction.getBookByISBN("123");
+        return libraryAction.getBookByISBN("1");
     }
 }

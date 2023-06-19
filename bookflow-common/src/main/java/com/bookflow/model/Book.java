@@ -33,7 +33,7 @@ public class Book {
     @Column(name = "PUBLICATION_YEAR")
     private OffsetDateTime publicationYear;
 
-    @Column(name = "LOABANLE_PIECE")
+    @Column(name = "LOANABLE_PIECE")
     private int loanablePiece;
 
     @Column(name = "BORROWED_PIECE")
