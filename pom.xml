@@ -71,6 +71,11 @@
             </dependency>
 
             <dependency>
+                <groupId>io.quarkus</groupId>
+                <artifactId>quarkus-jdbc-mariadb</artifactId>
+            </dependency>
+
+            <dependency>
                 <groupId>org.mapstruct</groupId>
                 <artifactId>mapstruct</artifactId>
                 <version>${dependency.version.mapstruct}</version>

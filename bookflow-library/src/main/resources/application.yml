@@ -1,0 +1,8 @@
+quarkus:
+  http:
+    port: 8082
+  datasource:
+    url: jdbc:mariadb://localhost:3306/db_name
+    driver: org.mariadb.jdbc.Driver
+    username: db_username
+    password: db_password
