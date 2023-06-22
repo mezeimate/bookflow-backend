@@ -5,6 +5,10 @@ import com.bookflow.model.Book;
 import jakarta.enterprise.context.Dependent;
 import jakarta.inject.Inject;
 
+/**
+ * @since 0.0.1-SNAPSHOT
+ * @author mezeim
+ */
 @Dependent
 public class LibraryAction {
 
@@ -12,6 +16,7 @@ public class LibraryAction {
     LibraryService libraryService;
 
     public Book getBookByISBN(String isbn) {
+        Book byAuthor = libraryService.findByAuthor("mm");
         return libraryService.findByISBN(isbn);
     }
 }

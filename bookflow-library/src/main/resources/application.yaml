@@ -1,0 +1,16 @@
+quarkus:
+  datasource:
+    db-kind: mariadb
+    username: bookflow-admin
+    password: passwd
+    jdbc:
+      url: jdbc:mariadb://localhost:3306/bookflow-mariadb
+    auto-create-tables: false
+#  hibernate-orm:
+#    database:
+#      generation: none
+#    show-sql: true
+#    log:
+#      sql: true
+  http:
+    port: 8082

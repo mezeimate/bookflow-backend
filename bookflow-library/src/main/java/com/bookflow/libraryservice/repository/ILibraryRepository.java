@@ -1,15 +1,19 @@
 package com.bookflow.libraryservice.repository;
 
 import com.bookflow.model.Book;
-import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.CrudRepository;
-import org.springframework.data.repository.query.Param;
-import org.springframework.stereotype.Repository;
+import io.quarkus.hibernate.orm.panache.PanacheRepositoryBase;
+import jakarta.enterprise.context.ApplicationScoped;
 
-@Repository
-public interface ILibraryRepository extends CrudRepository<Book, String> {
+/**
+ * Repository for {@link Book}.
+ *
+ * @since 0.0.1-SNAPSHOT
+ * @author mezeim
+ */
+@ApplicationScoped
+public class ILibraryRepository implements PanacheRepositoryBase<Book, String> {
 
-    @Query("SELECT b FROM Book b WHERE b.isbn = :isbn")
-    Book findByISBN(@Param("isbn") String isbn);
-
+    public Book findByAuthor(String author) {
+        return find("author", author).firstResult();
+    }
 }
