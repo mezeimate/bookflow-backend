@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 
 import java.time.OffsetDateTime;
 
@@ -28,6 +27,7 @@ public class Book {
     private Author author;
 
     @Column(name = "PUBLICATION_YEAR")
+    @Temporal(TemporalType.DATE)
     private OffsetDateTime publicationYear;
 
     @Column(name = "LOANABLE_PIECE")

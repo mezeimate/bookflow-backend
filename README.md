@@ -36,8 +36,7 @@ To run the project, ensure that you have the following installed:
 To build the project without starting the modules, use the following command: `mvn clean install -DskipTests`
 
 To run the application, execute the following commands for each module:
-- bookflow-common: `cd bookflow-common && mvn quarkus:dev`
-- bookflow-library: `cd bookflow-library && mvn quarkus:dev`
+- bookflow-library: `mvn quarkus:dev`
 
 > **_NOTE:_**  Quarkus now ships with a Dev UI, which is available in dev mode only at http://localhost:8080/q/dev/.
 

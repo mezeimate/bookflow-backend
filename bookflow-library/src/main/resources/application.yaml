@@ -16,6 +16,7 @@ quarkus:
       ignore: true
     database:
       generation: none
+    validate-in-dev-mode: false
   jpa:
     persistence-unit-name: bookflow
     properties:

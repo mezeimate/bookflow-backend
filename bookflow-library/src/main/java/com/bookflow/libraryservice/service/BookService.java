@@ -23,7 +23,7 @@ public class BookService {
         return libraryRepository.findByAuthor(author);
     }
 
-    public void persist(Book book) {
-        libraryRepository.persist(book);
+    public void persistAndFlush(Book book) {
+        libraryRepository.persistAndFlush(book);
     }
 }

@@ -12,4 +12,8 @@ import jakarta.enterprise.context.ApplicationScoped;
  */
 @ApplicationScoped
 public class IAuthorRepository implements PanacheRepository<Author> {
+
+    public Author findById(String authorId) {
+        return find("id", authorId).firstResult();
+    }
 }

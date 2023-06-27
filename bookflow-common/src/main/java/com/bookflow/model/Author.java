@@ -4,16 +4,14 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 
 @Entity
 @Table(name = "AUTHOR")
 @Data
-public class Author {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    public String id;
+@EqualsAndHashCode(callSuper = true)
+public class Author extends AbstractEntity{
 
     @NotNull
     @Size(max = 100)

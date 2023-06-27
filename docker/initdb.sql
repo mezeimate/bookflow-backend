@@ -2,7 +2,7 @@ CREATE TABLE AUTHOR
 (
 
     ID   VARCHAR(40) PRIMARY KEY NOT NULL COMMENT 'Author primary key',
-    NAME VARCHAR(100) NOT NULL COMMENT 'Author name'
+    NAME VARCHAR(100)            NOT NULL COMMENT 'Author name'
 
 ) ENGINE = InnoDb;
 
@@ -12,7 +12,7 @@ CREATE TABLE BOOK
 
     ISBN             VARCHAR(13) PRIMARY KEY NOT NULL COMMENT 'International Standard Book Number',
     TITLE            VARCHAR(255)            NOT NULL COMMENT 'Book title',
-    AUTHOR_ID        VARCHAR(40)                     NOT NULL COMMENT 'Book author key',
+    AUTHOR_ID        VARCHAR(40)             NOT NULL DEFAULT 0 COMMENT 'Book author key',
     PUBLICATION_YEAR DATE NULL COMMENT 'Book release date',
     LOANABLE_PIECE   int                     NOT NULL DEFAULT 0 COMMENT 'Loanable book piece',
     BORROWED_PIECE   int                     NOT NULL DEFAULT 0 COMMENT 'Borrowed book piece',
@@ -22,7 +22,8 @@ CREATE TABLE BOOK
 );
 
 INSERT INTO AUTHOR (ID, NAME)
-VALUES (1, 'J.R.R. Tolkien'),
+VALUES (0, 'Unknown author'),
+       (1, 'J.R.R. Tolkien'),
        (2, 'Paulo Coelho'),
        (3, 'J.K. Rowling'),
        (4, 'Don Miguel Ruiz'),
