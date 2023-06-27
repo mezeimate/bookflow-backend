@@ -1,6 +1,6 @@
 package com.bookflow.libraryservice.service;
 
-import com.bookflow.libraryservice.repository.ILibraryRepository;
+import com.bookflow.libraryservice.repository.IBookRepository;
 import com.bookflow.model.Book;
 import jakarta.enterprise.inject.Model;
 import jakarta.inject.Inject;
@@ -10,10 +10,10 @@ import jakarta.inject.Inject;
  * @author mezeim
  */
 @Model
-public class LibraryService {
+public class BookService {
 
     @Inject
-    ILibraryRepository libraryRepository;
+    IBookRepository libraryRepository;
 
     public Book findByISBN(String isbn) {
         return libraryRepository.findById(isbn);
@@ -21,5 +21,9 @@ public class LibraryService {
 
     public Book findByAuthor(String author) {
         return libraryRepository.findByAuthor(author);
+    }
+
+    public void persist(Book book) {
+        libraryRepository.persist(book);
     }
 }

@@ -1,12 +1,10 @@
 package com.bookflow.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import java.time.OffsetDateTime;
 
@@ -25,10 +23,9 @@ public class Book {
     @Column(name = "TITLE")
     private String title;
 
-    @NotNull
-    @Size(max = 100)
-    @Column(name = "AUTHOR")
-    private String author;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "AUTHOR_ID")
+    private Author author;
 
     @Column(name = "PUBLICATION_YEAR")
     private OffsetDateTime publicationYear;

@@ -11,7 +11,7 @@ import jakarta.enterprise.context.ApplicationScoped;
  * @author mezeim
  */
 @ApplicationScoped
-public class ILibraryRepository implements PanacheRepositoryBase<Book, String> {
+public class IBookRepository implements PanacheRepositoryBase<Book, String> {
 
     public Book findByAuthor(String author) {
         return find("author", author).firstResult();

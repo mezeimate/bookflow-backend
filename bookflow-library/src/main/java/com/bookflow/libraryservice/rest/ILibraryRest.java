@@ -9,8 +9,8 @@ import jakarta.ws.rs.core.MediaType;
 /**
  * Rest interface for {@link Book}.
  *
- * @since 0.0.1-SNAPSHOT
  * @author mezeim
+ * @since 0.0.1-SNAPSHOT
  */
 @Path("/library")
 public interface ILibraryRest {

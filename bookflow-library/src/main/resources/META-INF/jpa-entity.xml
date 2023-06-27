@@ -1,5 +1,0 @@
-<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" version="1.0">
-
-    <entity class="com.bookflow.model.Book"/>
-
-</entity-mappings>
