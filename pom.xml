@@ -3,14 +3,18 @@
          xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <modelVersion>4.0.0</modelVersion>
+
     <groupId>com.bookflow</groupId>
     <artifactId>bookflow</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+
     <packaging>pom</packaging>
+
     <modules>
         <module>bookflow-common</module>
         <module>bookflow-library</module>
     </modules>
+
     <properties>
         <compiler-plugin.version>3.11.0</compiler-plugin.version>
         <dependency.version.lombok>1.18.22</dependency.version.lombok>
@@ -23,9 +27,9 @@
         <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
         <quarkus.platform.group-id>io.quarkus.platform</quarkus.platform.group-id>
         <quarkus.platform.version>3.1.2.Final</quarkus.platform.version>
-        <skipITs>true</skipITs>
         <surefire-plugin.version>3.0.0</surefire-plugin.version>
     </properties>
+
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -75,6 +79,7 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
     <dependencies>
         <dependency>
             <groupId>io.quarkus</groupId>
@@ -92,7 +97,12 @@
             <groupId>io.quarkus</groupId>
             <artifactId>quarkus-hibernate-orm-panache</artifactId>
         </dependency>
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-smallrye-openapi</artifactId>
+        </dependency>
     </dependencies>
+
     <build>
         <pluginManagement>
             <plugins>
@@ -143,9 +153,9 @@
                     <artifactId>maven-surefire-plugin</artifactId>
                     <version>${surefire-plugin.version}</version>
                     <configuration>
-                        <systemProperties>
+                        <systemPropertyVariables>
                             <java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
-                        </systemProperties>
+                        </systemPropertyVariables>
                     </configuration>
                 </plugin>
             </plugins>
@@ -171,11 +181,11 @@
                                     <goal>verify</goal>
                                 </goals>
                                 <configuration>
-                                    <systemProperties>
+                                    <systemPropertyVariables>
                                         <native.image.path>
                                             ${project.build.directory}/${project.build.finalName}-runner
                                         </native.image.path>
-                                    </systemProperties>
+                                    </systemPropertyVariables>
                                 </configuration>
                             </execution>
                         </executions>

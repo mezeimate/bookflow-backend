@@ -11,7 +11,7 @@ import lombok.EqualsAndHashCode;
 @Table(name = "AUTHOR")
 @Data
 @EqualsAndHashCode(callSuper = true)
-public class Author extends AbstractEntity{
+public class Author extends AbstractEntity {
 
     @NotNull
     @Size(max = 100)

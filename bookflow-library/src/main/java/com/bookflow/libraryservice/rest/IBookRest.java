@@ -18,7 +18,7 @@ public interface IBookRest {
     @GET
     @Produces({MediaType.APPLICATION_JSON})
     @Path(LibraryPath.ID)
-    Book getBook(@QueryParam(LibraryPath.ID) String isbn);
+    Book getBook(@PathParam(LibraryPath.PATH_PARAM_ID) String isbn);
 
     @POST
     @Produces({MediaType.APPLICATION_JSON})

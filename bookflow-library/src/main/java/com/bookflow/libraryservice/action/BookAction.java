@@ -3,6 +3,7 @@ package com.bookflow.libraryservice.action;
 import com.bookflow.dto.PostBookRequest;
 import com.bookflow.libraryservice.service.AuthorService;
 import com.bookflow.libraryservice.service.BookService;
+import com.bookflow.model.Author;
 import com.bookflow.model.Book;
 import jakarta.enterprise.context.Dependent;
 import jakarta.inject.Inject;
@@ -31,12 +32,12 @@ public class BookAction {
 
     @Transactional
     public Book postBook(PostBookRequest postBookRequest) {
-        //Author author = authorService.findById(postBookRequest.getAuthorId());
+        Author author = authorService.findById(postBookRequest.getAuthorId());
 
-        //Book book = modelMapper.map(postBookRequest, Book.class);
-        Book book = new Book();
-        //book.setAuthor(author);
-        //bookService.persistAndFlush(book);
+        Book book = modelMapper.map(postBookRequest, Book.class);
+        book.setAuthor(author);
+        bookService.persistAndFlush(book);
+
         return book;
     }
 }

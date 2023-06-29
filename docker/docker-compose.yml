@@ -1,4 +1,5 @@
 version: "3.7"
+name: bookflow
 services:
   maria_db:
     image: mariadb:11.0.2
@@ -13,17 +14,14 @@ services:
     volumes:
       - ./initdb.sql:/docker-entrypoint-initdb.d/initdb.sql:ro
       - project-database-data:/var/lib/mysql
-#  swagger_ui:
-#    image: swaggerapi/swagger-ui:v5.0.0-alpha.15
-#    container_name: swagger_container
-#    environment:
-#      API_URL: http://localhost:8080/openapi
-#    ports:
-#      - "8080:8080"
-#    volumes:
-#      - project-database-data:/data
+  swagger_ui:
+    image: swaggerapi/swagger-ui:v5.0.0-alpha.15
+    container_name: swagger_container
+    environment:
+      API_URL: http://localhost:8080/openapi
+    ports:
+      - "8080:8080"
+    volumes:
+      - project-database-data:/data
 volumes:
   project-database-data:
-networks:
-  default:
-    name: project_default

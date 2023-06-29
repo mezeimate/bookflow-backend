@@ -3,8 +3,6 @@ quarkus:
     jdbc:
       driver: org.mariadb.jdbc.Driver
       url: jdbc:mariadb://localhost:3306/bookflow-mariadb
-      user: bookflow-admin
-      password: passwd
     db-kind: mariadb
     username: bookflow-admin
     password: passwd
@@ -20,10 +18,10 @@ quarkus:
   jpa:
     persistence-unit-name: bookflow
     properties:
-      hibernate:
-        archive.autodetection: false
-        hbm2ddl.auto: none
-    orm-xml:
-      disable-validation: true
+      hibernate.archive.autodetection: false
+      hibernate.hbm2ddl.auto: none
+      quarkus.jpa.orm-xml.disable-validation: true
   http:
     port: 8082
+  swagger-ui:
+    theme: newspaper

@@ -5,8 +5,6 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
 
-import java.time.OffsetDateTime;
-
 @Entity
 @Table(name = "BOOK")
 @Data
@@ -22,13 +20,12 @@ public class Book {
     @Column(name = "TITLE")
     private String title;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "AUTHOR_ID")
     private Author author;
 
     @Column(name = "PUBLICATION_YEAR")
-    @Temporal(TemporalType.DATE)
-    private OffsetDateTime publicationYear;
+    private int publicationYear;
 
     @Column(name = "LOANABLE_PIECE")
     private int loanablePiece;

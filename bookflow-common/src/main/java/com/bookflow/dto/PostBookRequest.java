@@ -5,8 +5,6 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
 
-import java.time.OffsetDateTime;
-
 @Vetoed
 @Data
 public class PostBookRequest {
@@ -23,7 +21,7 @@ public class PostBookRequest {
     private String authorId;
 
     @NotNull
-    private OffsetDateTime publicationYear;
+    private int publicationYear;
 
     @NotNull
     private int loanablePiece;
