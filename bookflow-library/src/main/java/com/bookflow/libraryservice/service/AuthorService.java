@@ -5,6 +5,8 @@ import com.bookflow.model.Author;
 import jakarta.enterprise.inject.Model;
 import jakarta.inject.Inject;
 
+import java.util.List;
+
 /**
  * @author mezeim
  * @since 0.0.1-SNAPSHOT
@@ -17,6 +19,10 @@ public class AuthorService {
 
     public Author findById(String authorId) {
         return authorRepository.findById(authorId);
+    }
+
+    public List<Author> findAllAuthor(int index, int size) {
+        return authorRepository.findAllAuthor(index, size);
     }
 
 }

@@ -19,10 +19,6 @@ public class BookService {
         return libraryRepository.findById(isbn);
     }
 
-    public Book findByAuthor(String author) {
-        return libraryRepository.findByAuthor(author);
-    }
-
     public void persistAndFlush(Book book) {
         libraryRepository.persistAndFlush(book);
     }

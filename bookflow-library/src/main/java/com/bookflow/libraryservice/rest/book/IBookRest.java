@@ -1,4 +1,4 @@
-package com.bookflow.libraryservice.rest;
+package com.bookflow.libraryservice.rest.book;
 
 import com.bookflow.dto.PostBookRequest;
 import com.bookflow.libraryservice.common.LibraryPath;

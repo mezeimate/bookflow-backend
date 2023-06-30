@@ -1,7 +1,8 @@
 package com.bookflow.model;
 
+import io.smallrye.common.constraint.NotNull;
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotNull;
+
 import jakarta.validation.constraints.Size;
 import lombok.Data;
 
