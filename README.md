@@ -30,13 +30,22 @@ To run the project, ensure that you have the following installed:
 1. Clone the repository: `git clone https://github.com/mezeimate/bookflow-backend`
 2. Navigate to the project directory: `cd bookflow-backend`
 
-## You can run your application in dev mode that enables live coding using: 
-`./mvnw compile quarkus:dev`
+### Create docker containers
+#### Mariadb and phpmyadmin:
+- `cd .\bookflow-liquibase\src\main\resources\schema\`
+- `docker-compose up`
 
-To build the project without starting the modules, use the following command: `mvn clean install -DskipTests`
+#### Create database tables and add rows
+- `cd .\bookflow-liquibase\src\main\resources\db\`
+- `docker-compose up`
+
+### Run application
+
+To build the project without starting the modules, use the following command: `mvn clean install`
 
 To run the application, execute the following commands for each module:
-- bookflow-library: `mvn quarkus:dev`
+- `cd .\bookflow-library\`
+- `mvn quarkus:dev`
 
 > **_NOTE:_**  Quarkus now ships with a Dev UI, which is available in dev mode only at http://localhost:8080/q/dev/.
 
