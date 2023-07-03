@@ -9,6 +9,7 @@
         <artifactId>bookflow-backend</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
+    <packaging>jar</packaging>
 
     <artifactId>bookflow-common</artifactId>
 
