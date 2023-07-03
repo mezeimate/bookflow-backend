@@ -13,6 +13,15 @@ services:
       MYSQL_ROOT_PASSWORD: passwd
     volumes:
       - project-database-data:/var/lib/mysql
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: bookflow-phpmyadmin
+    restart: always
+    ports:
+      - "8080:80"
+    environment:
+      PMA_HOST: bookflow-mariadb
+      MYSQL_ROOT_PASSWORD: passwd
 
 #  swagger_ui:
 #    image: swaggerapi/swagger-ui:v5.0.0-alpha.15
