@@ -1,0 +1,29 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+
+    <changeSet id="insertData_AUTHOR" author="mezeim">
+        <sql>
+            <![CDATA[
+            INSERT INTO AUTHOR (ID, NAME)
+            VALUES ('1', 'J.R.R. Tolkien'),
+                   ('2', 'Paulo Coelho'),
+                   ('3', 'J.K. Rowling'),
+                   ('4', 'Don Miguel Ruiz'),
+                   ('5', 'John Green'),
+                   ('6', 'F. Scott Fitzgerald'),
+                   ('7', 'Harper Lee'),
+                   ('8', 'George Orwell'),
+                   ('9', 'Jane Austen'),
+                   ('10', 'J.D. Salinger'),
+                   ('11', 'Agatha Christie'),
+                   ('12', 'Leo Tolstoy'),
+                   ('13', 'Fyodor Dostoevsky'),
+                   ('14', 'Gabriel Garcia Marquez'),
+                   ('15', 'Ernest Hemingway')
+            ]]>
+        </sql>
+    </changeSet>
+
+</databaseChangeLog>

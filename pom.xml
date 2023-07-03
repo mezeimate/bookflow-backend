@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.bookflow</groupId>
-    <artifactId>bookflow</artifactId>
+    <artifactId>bookflow-backend</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
     <packaging>pom</packaging>
@@ -13,6 +13,7 @@
     <modules>
         <module>bookflow-common</module>
         <module>bookflow-library</module>
+        <module>bookflow-liquibase</module>
     </modules>
 
     <properties>

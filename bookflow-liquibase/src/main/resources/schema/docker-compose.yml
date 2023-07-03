@@ -12,8 +12,8 @@ services:
       MYSQL_PASSWORD: passwd
       MYSQL_ROOT_PASSWORD: passwd
     volumes:
-      - ./initdb.sql:/docker-entrypoint-initdb.d/initdb.sql:ro
       - project-database-data:/var/lib/mysql
+
 #  swagger_ui:
 #    image: swaggerapi/swagger-ui:v5.0.0-alpha.15
 #    container_name: swagger_container
@@ -23,5 +23,6 @@ services:
 #      - "8080:8080"
 #    volumes:
 #      - project-database-data:/data
+
 volumes:
   project-database-data:
