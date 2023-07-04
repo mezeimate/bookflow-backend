@@ -39,6 +39,8 @@ To run the project, ensure that you have the following installed:
 - `cd .\bookflow-liquibase\src\main\resources\db\`
 - `docker-compose up`
 
+phpmyadmin: `http://localhost:8080`
+
 ### Run application
 
 To build the project without starting the modules, use the following command: `mvn clean install`
