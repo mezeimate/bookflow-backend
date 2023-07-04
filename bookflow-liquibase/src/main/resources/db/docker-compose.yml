@@ -1,0 +1,15 @@
+version: "3.7"
+name: bookflow
+services:
+  liquibase:
+    container_name: bookflow-liquibase
+    image: liquibase/liquibase
+    environment:
+      LIQUIBASE_COMMAND_USERNAME: bookflow-admin
+      LIQUIBASE_COMMAND_PASSWORD: passwd
+      LIQUIBASE_COMMAND_URL: jdbc:mariadb://bookflow-mariadb:3306/bookflow-mariadb
+      LIQUIBASE_COMMAND_CHANGELOG_FILE: /../changelog/liquibase-changelog.xml
+    volumes:
+      - ./../changelog/:/liquibase/changelog
+    command: update
+

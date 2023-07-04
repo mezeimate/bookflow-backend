@@ -1,0 +1,29 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+
+    <changeSet id="createTable_BOOK" author="mezeim">
+        <createTable tableName="BOOK">
+            <column name="ISBN" type="VARCHAR(13)">
+                <constraints primaryKey="true" nullable="false" />
+            </column>
+            <column name="TITLE" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="AUTHOR_ID" type="VARCHAR(40)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="PUBLICATION_YEAR" type="SMALLINT(4)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="LOANABLE_PIECE" type="INT" defaultValueNumeric="0">
+                <constraints nullable="false"/>
+            </column>
+            <column name="BORROWED_PIECE" type="INT" defaultValueNumeric="0">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>

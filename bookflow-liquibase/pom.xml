@@ -9,22 +9,14 @@
         <artifactId>bookflow-backend</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
 
-    <artifactId>bookflow-common</artifactId>
+    <artifactId>bookflow-liquibase</artifactId>
 
     <dependencies>
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>jakarta.persistence</groupId>
-            <artifactId>jakarta.persistence-api</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>jakarta.validation</groupId>
-            <artifactId>jakarta.validation-api</artifactId>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-liquibase</artifactId>
         </dependency>
     </dependencies>
 
