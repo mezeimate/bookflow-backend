@@ -17,6 +17,7 @@ BookFlow consists of the following modules:
 - **bookflow**: The main project module, which encompasses the entire BookFlow application.
 - **bookflow-common**: The common module where entities and shared functionalities reside.
 - **bookflow-library**: The library module that contains all the business logic for the BookFlow application. It runs on port 8082.
+- **bookflow-liquibase**: The Liquibase module responsible for managing database schema versioning and migrations in the BookFlow application. 
 
 ## Prerequisites
 
