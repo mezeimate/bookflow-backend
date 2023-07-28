@@ -2,7 +2,7 @@ package com.bookflow.libraryservice.rest.book;
 
 import com.bookflow.dto.PostBookRequest;
 import com.bookflow.libraryservice.action.BookAction;
-import com.bookflow.model.Book;
+import com.bookflow.model.library.Book;
 import jakarta.enterprise.inject.Model;
 import jakarta.inject.Inject;
 

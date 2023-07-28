@@ -2,7 +2,7 @@ package com.bookflow.libraryservice.action;
 
 import com.bookflow.dto.QueryRequest;
 import com.bookflow.libraryservice.service.AuthorService;
-import com.bookflow.model.Author;
+import com.bookflow.model.library.Author;
 import jakarta.enterprise.context.Dependent;
 import jakarta.inject.Inject;
 

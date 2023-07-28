@@ -1,6 +1,6 @@
 package com.bookflow.libraryservice.repository;
 
-import com.bookflow.model.Book;
+import com.bookflow.model.library.Book;
 import io.quarkus.hibernate.orm.panache.PanacheRepositoryBase;
 import jakarta.enterprise.context.ApplicationScoped;
 
@@ -11,6 +11,6 @@ import jakarta.enterprise.context.ApplicationScoped;
  * @author mezeim
  */
 @ApplicationScoped
-public class IBookRepository implements PanacheRepositoryBase<Book, String> {
+public class BookRepository implements PanacheRepositoryBase<Book, String> {
 
 }

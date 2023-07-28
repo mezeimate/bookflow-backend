@@ -1,4 +1,4 @@
-package com.bookflow.model;
+package com.bookflow.model.library;
 
 import io.smallrye.common.constraint.NotNull;
 import jakarta.persistence.*;

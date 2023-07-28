@@ -1,5 +1,6 @@
-package com.bookflow.model;
+package com.bookflow.model.library;
 
+import com.bookflow.model.AbstractEntity;
 import io.smallrye.common.constraint.NotNull;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Size;

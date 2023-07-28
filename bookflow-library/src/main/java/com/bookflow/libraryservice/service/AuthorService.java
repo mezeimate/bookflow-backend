@@ -1,7 +1,7 @@
 package com.bookflow.libraryservice.service;
 
-import com.bookflow.libraryservice.repository.IAuthorRepository;
-import com.bookflow.model.Author;
+import com.bookflow.libraryservice.repository.AuthorRepository;
+import com.bookflow.model.library.Author;
 import jakarta.enterprise.inject.Model;
 import jakarta.inject.Inject;
 
@@ -15,7 +15,7 @@ import java.util.List;
 public class AuthorService {
 
     @Inject
-    IAuthorRepository authorRepository;
+    AuthorRepository authorRepository;
 
     public Author findById(String authorId) {
         return authorRepository.findById(authorId);

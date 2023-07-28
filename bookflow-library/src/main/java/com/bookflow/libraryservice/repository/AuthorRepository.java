@@ -1,6 +1,6 @@
 package com.bookflow.libraryservice.repository;
 
-import com.bookflow.model.Author;
+import com.bookflow.model.library.Author;
 import io.quarkus.hibernate.orm.panache.PanacheRepositoryBase;
 import jakarta.enterprise.context.ApplicationScoped;
 
@@ -13,7 +13,7 @@ import java.util.List;
  * @since 0.0.1-SNAPSHOT
  */
 @ApplicationScoped
-public class IAuthorRepository implements PanacheRepositoryBase<Author, String> {
+public class AuthorRepository implements PanacheRepositoryBase<Author, String> {
 
     public Author findById(String authorId) {
         return find("id", authorId).firstResult();

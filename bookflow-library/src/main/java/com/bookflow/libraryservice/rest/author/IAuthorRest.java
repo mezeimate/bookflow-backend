@@ -2,7 +2,7 @@ package com.bookflow.libraryservice.rest.author;
 
 import com.bookflow.dto.QueryRequest;
 import com.bookflow.libraryservice.common.LibraryPath;
-import com.bookflow.model.Author;
+import com.bookflow.model.library.Author;
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.POST;
 import jakarta.ws.rs.Path;

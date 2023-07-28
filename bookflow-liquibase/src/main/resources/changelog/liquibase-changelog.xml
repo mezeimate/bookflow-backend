@@ -3,10 +3,10 @@
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                                        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
 
-    <include file="create-author.xml"/>
-    <include file="insert-data-author.xml"/>
+    <include file="001_library_author_book_create/create-author.xml"/>
+    <include file="001_library_author_book_create/insert-data-author.xml"/>
 
-    <include file="create-book.xml"/>
-    <include file="insert-data-book.xml"/>
+    <include file="insert_table_rows/create-book.xml"/>
+    <include file="insert_table_rows/insert-data-book.xml"/>
 
 </databaseChangeLog>

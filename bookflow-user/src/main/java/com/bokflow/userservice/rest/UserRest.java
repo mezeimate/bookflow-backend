@@ -1,14 +1,19 @@
 package com.bokflow.userservice.rest;
 
-import com.bokflow.userservice.common.UserPath;
-import jakarta.ws.rs.Path;
+import com.bokflow.userservice.action.UserAction;
+import com.bookflow.dto.PostUserRequest;
+import com.bookflow.model.user.User;
+import jakarta.enterprise.inject.Model;
+import jakarta.inject.Inject;
 
-/**
- * Rest interface for User
- *
- * @author mezeim
- * @since 0.0.1-SNAPSHOT
- */
-@Path(UserPath.USER_REST_BASE_PATH)
-public interface UserRest {
+@Model
+public class UserRest implements IUserRest {
+
+    @Inject
+    UserAction userAction;
+
+    @Override
+    public User postRegistrationUser(PostUserRequest request) {
+        return userAction.postRegistrationUser(request);
+    }
 }
