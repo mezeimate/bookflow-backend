@@ -2,6 +2,7 @@ package com.bookflow.libraryservice.service;
 
 import com.bookflow.libraryservice.repository.BookRepository;
 import com.bookflow.model.library.Book;
+import com.bookflow.validator.RepositoryValidateService;
 import jakarta.enterprise.inject.Model;
 import jakarta.inject.Inject;
 
@@ -10,16 +11,16 @@ import jakarta.inject.Inject;
  * @author mezeim
  */
 @Model
-public class BookService {
+public class BookService extends RepositoryValidateService {
 
     @Inject
     BookRepository libraryRepository;
 
     public Book findByISBN(String isbn) {
-        return libraryRepository.findById(isbn);
+        return validate(libraryRepository::findById, isbn);
     }
 
     public void persistAndFlush(Book book) {
-        libraryRepository.persistAndFlush(book);
+        validateVoid(libraryRepository::persistAndFlush, book);
     }
 }

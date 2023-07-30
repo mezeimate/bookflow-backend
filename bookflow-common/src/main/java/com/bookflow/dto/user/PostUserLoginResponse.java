@@ -1,32 +1,34 @@
-package com.bookflow.dto;
+package com.bookflow.dto.user;
 
+import com.bookflow.model.enums.Role;
 import jakarta.enterprise.inject.Vetoed;
-import jakarta.persistence.Column;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
 
+import java.time.OffsetDateTime;
+
 @Vetoed
 @Data
-public class PostUserRequest {
+public class PostUserLoginResponse {
 
     @NotNull
     @NotEmpty
     @Size(max = 50)
-    @Column(name = "USERNAME")
     private String username;
 
     @NotNull
     @NotEmpty
     @Size(max = 100)
-    @Column(name = "EMAIL")
     private String email;
 
     @NotNull
-    @NotEmpty
-    @Size(max = 60)
-    @Column(name = "PASSWORD")
-    private String password;
+    private Role role;
 
+    @NotNull
+    private String sessionToken;
+
+    @NotNull
+    private OffsetDateTime expireDate;
 }

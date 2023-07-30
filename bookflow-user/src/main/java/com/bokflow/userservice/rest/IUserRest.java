@@ -1,14 +1,15 @@
 package com.bokflow.userservice.rest;
 
 import com.bokflow.userservice.common.UserPath;
-import com.bookflow.dto.PostUserRequest;
+import com.bookflow.dto.user.GetCurrentUserResponse;
+import com.bookflow.dto.user.PostLoginRequest;
+import com.bookflow.dto.user.PostUserLoginResponse;
+import com.bookflow.dto.user.PostUserRequest;
 import com.bookflow.model.user.User;
 import jakarta.validation.Valid;
-import jakarta.ws.rs.Consumes;
-import jakarta.ws.rs.POST;
-import jakarta.ws.rs.Path;
-import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
+import jakarta.ws.rs.core.Response;
 
 /**
  * Rest interface for User
@@ -22,5 +23,20 @@ public interface IUserRest {
     @POST
     @Produces({MediaType.APPLICATION_JSON})
     @Consumes({MediaType.APPLICATION_JSON})
+    @Path(UserPath.POST_REGISTER)
     User postRegistrationUser(@Valid PostUserRequest request);
+
+    @POST
+    @Produces({MediaType.APPLICATION_JSON})
+    @Consumes({MediaType.APPLICATION_JSON})
+    @Path(UserPath.POST_LOGIN)
+    PostUserLoginResponse postLoginUser(@Valid PostLoginRequest request);
+
+    @GET
+    @Produces({MediaType.APPLICATION_JSON})
+    GetCurrentUserResponse getCurrentUser();
+
+    @GET
+    @Produces({MediaType.APPLICATION_JSON})
+    Response logout();
 }

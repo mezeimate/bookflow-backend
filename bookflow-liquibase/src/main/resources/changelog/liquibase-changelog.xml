@@ -4,9 +4,12 @@
                                        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
 
     <include file="001_library_author_book_create/create-author.xml"/>
-    <include file="001_library_author_book_create/insert-data-author.xml"/>
+    <include file="001_library_author_book_create/create-book.xml"/>
 
-    <include file="insert_table_rows/create-book.xml"/>
+    <include file="002_create_user/create-user.xml"/>
+
+    <include file="insert_table_rows/insert-data-author.xml"/>
     <include file="insert_table_rows/insert-data-book.xml"/>
+    <include file="insert_table_rows/insert-data-user.xml"/>
 
 </databaseChangeLog>

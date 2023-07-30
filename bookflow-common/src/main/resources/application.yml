@@ -21,7 +21,5 @@ quarkus:
       hibernate.archive.autodetection: false
       hibernate.hbm2ddl.auto: none
       quarkus.jpa.orm-xml.disable-validation: true
-  http:
-    port: 8082
   swagger-ui:
     theme: newspaper

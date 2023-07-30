@@ -1,0 +1,22 @@
+quarkus:
+  http:
+    port: 8083
+    auth:
+      proactive: false
+  swagger-ui:
+    theme: newspaper
+  smallrye-jwt:
+    enabled: true
+    roles-claim: roles
+
+mp:
+  jwt:
+    verify:
+      publickey:
+        location: /public-key.pem
+      issuer: book-flow
+
+#smallrye.jwt:
+#  sign:
+#    key:
+#      location: /private-key.pem

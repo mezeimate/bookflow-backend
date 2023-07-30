@@ -1,19 +1,15 @@
-package com.bookflow.model.user;
+package com.bookflow.dto.user;
 
-import com.bookflow.model.AbstractEntity;
-import com.bookflow.model.enums.Role;
-import jakarta.persistence.*;
+import jakarta.enterprise.inject.Vetoed;
+import jakarta.persistence.Column;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 
-@Entity
-@Table(name = "USER")
+@Vetoed
 @Data
-@EqualsAndHashCode(callSuper = true)
-public class User extends AbstractEntity {
+public class PostUserRequest {
 
     @NotNull
     @NotEmpty
@@ -33,8 +29,4 @@ public class User extends AbstractEntity {
     @Column(name = "PASSWORD")
     private String password;
 
-    @NotNull
-    @Enumerated(EnumType.STRING)
-    @Column(name = "ROLE")
-    private Role role;
 }

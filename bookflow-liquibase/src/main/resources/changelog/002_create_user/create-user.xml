@@ -22,6 +22,10 @@
                 <constraints nullable="false"/>
             </column>
 
+            <column name="ROLE" type="VARCHAR(10)">
+                <constraints nullable="false" checkConstraint="ROLE IN ('USER', 'ADMIN', 'SUPER_ADMIN')"/>
+            </column>
+
         </createTable>
     </changeSet>
 
