@@ -1,4 +1,4 @@
-package com.bookflow.libraryservice.common;
+package com.bookflow.path;
 
 import jakarta.enterprise.inject.Vetoed;
 

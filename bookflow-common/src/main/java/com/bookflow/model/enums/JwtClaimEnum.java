@@ -10,7 +10,7 @@ public enum JwtClaimEnum {
 
     private final String value;
 
-    private JwtClaimEnum(String value) {
+    JwtClaimEnum(String value) {
         this.value = value;
     }
 }

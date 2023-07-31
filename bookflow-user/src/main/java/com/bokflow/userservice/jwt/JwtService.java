@@ -15,7 +15,7 @@ public class JwtService {
         Instant expireDate = Instant.now().plusSeconds(3600);
 
         String token = Jwt.issuer(JwtClaimEnum.ISSUER.getValue())
-                .upn(user.getUsername())
+                .preferredUserName(user.getUsername())
                 .claim(JwtClaimEnum.EMAIL.getValue(), user.getEmail())
                 .groups(user.getRole().name()) // TODO
                 .expiresAt(expireDate) //1hour

@@ -3,6 +3,7 @@ package com.bookflow.libraryservice.rest.book;
 import com.bookflow.dto.PostBookRequest;
 import com.bookflow.libraryservice.action.BookAction;
 import com.bookflow.model.library.Book;
+import jakarta.annotation.security.RolesAllowed;
 import jakarta.enterprise.inject.Model;
 import jakarta.inject.Inject;
 
@@ -17,6 +18,7 @@ public class BookRest implements IBookRest {
     BookAction bookAction;
 
     @Override
+    @RolesAllowed("USER")
     public Book getBook(String isbn) {
         return bookAction.getBook(isbn);
     }

@@ -1,11 +1,11 @@
 package com.bokflow.userservice.rest;
 
-import com.bokflow.userservice.common.UserPath;
 import com.bookflow.dto.user.GetCurrentUserResponse;
 import com.bookflow.dto.user.PostLoginRequest;
 import com.bookflow.dto.user.PostUserLoginResponse;
 import com.bookflow.dto.user.PostUserRequest;
 import com.bookflow.model.user.User;
+import com.bookflow.path.UserPath;
 import jakarta.validation.Valid;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;

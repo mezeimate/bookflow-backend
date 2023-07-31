@@ -1,7 +1,7 @@
 package com.bookflow.libraryservice.rest.book;
 
 import com.bookflow.dto.PostBookRequest;
-import com.bookflow.libraryservice.common.LibraryPath;
+import com.bookflow.path.LibraryPath;
 import com.bookflow.model.library.Book;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;

@@ -11,8 +11,8 @@ import jakarta.transaction.Transactional;
 import org.modelmapper.ModelMapper;
 
 /**
- * @since 0.0.1-SNAPSHOT
  * @author mezeim
+ * @since 0.0.1-SNAPSHOT
  */
 @Dependent
 public class BookAction {
