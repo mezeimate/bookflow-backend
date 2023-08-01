@@ -9,7 +9,6 @@ import com.bookflow.path.UserPath;
 import jakarta.validation.Valid;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
-import jakarta.ws.rs.core.Response;
 
 /**
  * Rest interface for User
@@ -36,7 +35,4 @@ public interface IUserRest {
     @Produces({MediaType.APPLICATION_JSON})
     GetCurrentUserResponse getCurrentUser();
 
-    @GET
-    @Produces({MediaType.APPLICATION_JSON})
-    Response logout();
 }

@@ -1,19 +1,15 @@
 package com.bokflow.userservice.rest;
 
 import com.bokflow.userservice.action.UserAction;
-import com.bookflow.path.UserPath;
 import com.bookflow.dto.user.GetCurrentUserResponse;
 import com.bookflow.dto.user.PostLoginRequest;
 import com.bookflow.dto.user.PostUserLoginResponse;
 import com.bookflow.dto.user.PostUserRequest;
 import com.bookflow.model.user.User;
 import com.bookflow.validator.RestValidateService;
-import io.quarkus.security.Authenticated;
 import jakarta.annotation.security.RolesAllowed;
 import jakarta.enterprise.inject.Model;
 import jakarta.inject.Inject;
-import jakarta.ws.rs.Path;
-import jakarta.ws.rs.core.Response;
 
 @Model
 public class UserRest extends RestValidateService implements IUserRest {
@@ -35,13 +31,6 @@ public class UserRest extends RestValidateService implements IUserRest {
     @RolesAllowed("USER")
     public GetCurrentUserResponse getCurrentUser() {
         return userAction.getCurrentUser();
-    }
-
-    @Override
-    @Authenticated
-    @Path(UserPath.LOGOUT)
-    public Response logout() {
-        return userAction.logout();
     }
 
 }

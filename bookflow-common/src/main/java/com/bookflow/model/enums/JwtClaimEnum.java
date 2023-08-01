@@ -5,7 +5,6 @@ import lombok.Getter;
 @Getter
 public enum JwtClaimEnum {
 
-    ISSUER("book-flow"),
     EMAIL("email");
 
     private final String value;

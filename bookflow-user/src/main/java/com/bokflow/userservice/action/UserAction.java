@@ -14,7 +14,6 @@ import com.bookflow.utils.OffsetDateTimeUtil;
 import jakarta.enterprise.context.Dependent;
 import jakarta.inject.Inject;
 import jakarta.transaction.Transactional;
-import jakarta.ws.rs.core.Response;
 import org.modelmapper.ModelMapper;
 
 @Dependent
@@ -62,8 +61,4 @@ public class UserAction {
         return modelMapper.map(currentUserData.getLoggedInUser(), GetCurrentUserResponse.class);
     }
 
-    public Response logout() {
-
-        return Response.accepted().build();
-    }
 }

@@ -9,12 +9,13 @@ quarkus:
     auto-create-tables: false
   hibernate-orm:
     dialect: org.hibernate.dialect.MariaDBDialect
-    show-sql: true
     persistence-xml:
       ignore: true
     database:
       generation: none
     validate-in-dev-mode: false
+    log:
+      sql: false
   jpa:
     persistence-unit-name: bookflow
     properties:
@@ -23,3 +24,5 @@ quarkus:
       quarkus.jpa.orm-xml.disable-validation: true
   swagger-ui:
     theme: newspaper
+  log:
+    level: INFO
